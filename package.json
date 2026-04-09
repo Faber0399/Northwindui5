@@ -1,0 +1,17 @@
+{
+    "name": "tutorialUI5.UI5project",
+    "scripts": {
+        "build": "mbt build --mtar tutorialUI5.UI5project.mtar",
+        "build:workspaces": "npm run build --workspaces --if-present",
+        "deploy": "cf deploy mta_archives/tutorialUI5.UI5project.mtar --retries 0",
+        "lint": "npm run lint --workspaces --if-present",
+        "ui5lint": "npm run ui5lint --workspaces --if-present",
+        "start:appui5": "npm start --workspace appui5"
+    },
+    "dependencies": {
+        "mbt": "^1"
+    },
+    "workspaces": [
+        "appui5"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+  "generator-ui5-project": {
+    "namespaceUI5": "tutorialUI5",
+    "projectName": "UI5project",
+    "uimoduleName": "appui5",
+    "enableFPM": false,
+    "platform": "SAP Build Work Zone, standard edition",
+    "tileName": "my UI5 application",
+    "ui5Libs": "Local resources (SAPUI5)",
+    "newDir": true,
+    "initRepo": true,
+    "projectId": "tutorialUI5.UI5project"
+  }
+}
