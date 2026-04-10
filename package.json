@@ -13,5 +13,9 @@
     },
     "workspaces": [
         "appui5"
-    ]
+    ],
+    "devDependencies": {
+        "@sap/ux-ui5-tooling": "^1.22.0",
+        "@ui5/cli": "^4.0.51"
+    }
 }

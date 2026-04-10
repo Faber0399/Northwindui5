@@ -5,10 +5,12 @@
     "uimoduleName": "appui5",
     "enableFPM": false,
     "platform": "SAP Build Work Zone, standard edition",
-    "tileName": "my UI5 application",
     "ui5Libs": "Local resources (SAPUI5)",
     "newDir": true,
     "initRepo": true,
-    "projectId": "tutorialUI5.UI5project"
+    "projectId": "tutorialUI5.UI5project",
+    "uimodules": [
+      "appui5"
+    ]
   }
 }

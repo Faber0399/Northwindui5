@@ -13,20 +13,15 @@ server:
             - /resources
             - /test-resources
           url: https://ui5.sap.com
+        backend:
+          - path: /V2/Northwind/Northwind.svc/
+            url: https://services.odata.org
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
         port: 35729
         path: webapp
         delay: 300
-    - name: preview-middleware
-      afterMiddleware: compression
-      configuration:
-        flp:
-          path: /test/flpSandbox.html
-        test:
-          - framework: Qunit
-          - framework: OPA5
 builder:
   customTasks:
     - name: ui5-task-zipper

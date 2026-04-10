@@ -27,6 +27,17 @@
                     "icon": "sap-icon://add"
                 }
             }
+        },
+        "dataSources": {
+            "defaultDataSource": {
+                "uri": "/V2/Northwind/Northwind.svc/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
         }
     },
     "sap.ui": {
@@ -48,7 +59,7 @@
     "sap.ui5": {
         "flexEnabled": true,
         "dependencies": {
-            "minUI5Version": "1.136.2",
+            "minUI5Version": "^4.0.51",
             "libs": {
                 "sap.m": {},
                 "sap.ui.core": {}
@@ -64,6 +75,11 @@
                 "settings": {
                     "bundleName": "appui5.i18n.i18n"
                 }
+            },
+            "": {
+                "dataSource": "defaultDataSource",
+                "preload": true,
+                "settings": {}
             }
         },
         "resources": {
@@ -90,6 +106,13 @@
                     "target": [
                         "TargetMainView"
                     ]
+                },
+                {
+                    "name": "RouteDetallesProductos",
+                    "pattern": "detallesproductos/{productId}",
+                    "target": [
+                        "TargetDetallesProductos"
+                    ]
                 }
             ],
             "targets": {
@@ -97,8 +120,15 @@
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
-                    "viewId": "MainView",
-                    "viewName": "MainView"
+                    "viewId": "Products",
+                    "viewName": "Products"
+                },
+                "TargetDetallesProductos": {
+                    "viewType": "XML",
+                    "transition": "Slide",
+                    "clearControlAggregation": false,
+                    "viewId": "DetallesProductos",
+                    "viewName": "DetallesProductos"
                 }
             }
         },
