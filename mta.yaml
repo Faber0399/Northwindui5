@@ -50,6 +50,10 @@ modules:
     type: html5
     path: appui5
     build-parameters:
+      builder: custom
+      commands:
+        - npm install
+        - npm run build
       supported-platforms: []
 resources:
   - name: tutorialUI5.UI5project-destination-service
